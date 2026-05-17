@@ -1,7 +1,6 @@
 import sys
 import requests
 
-
 def get_current_weather(city_name, api_key):
     """专门负责获取并打印当前实时天气"""
     base_url = "http://api.openweathermap.org/data/2.5/weather"
@@ -69,7 +68,7 @@ def get_5_day_forecast(city_name, api_key):
 
 
 if __name__ == "__main__":
-    API_KEY = "your_api_key_here"
+    API_KEY = "your_api_key"
 
     if len(sys.argv) < 2:
         print("\n❌ 错误: 缺少参数！")
