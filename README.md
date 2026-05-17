@@ -142,8 +142,3 @@ Possible future upgrades:
 - Create a GUI version
 - Package the app with argparse
 
----
-
-# Author
-
-Created by Linhua Zhou
