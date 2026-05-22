@@ -1,31 +1,36 @@
-# Weather CLI App
+# Weather CLI App Dashboard
 
-A simple command-line weather application built with Python and the OpenWeatherMap API.
+![Terminal UI](assets/screenshot.png)
+
+A beautiful and modern command-line weather application built with Python, the OpenWeatherMap API, and the `rich` library for terminal rendering.
 
 This project allows users to:
 
-- Check the current weather of a city
-- View a 5-day weather forecast
+- Check the current weather of a city with a visually appealing UI
+- View today's comprehensive forecast (High/Low temps)
+- View a 5-day weather forecast table (starting from tomorrow)
 - Handle invalid city names and network errors gracefully
-- Use command-line arguments to search cities quickly
+- Securely manage API keys using `.env` files
 
 ---
 
 # Features
 
-- Real-time weather data
-- 5-day forecast overview
-- Chinese language weather descriptions
-- Error handling with `try-except`
-- Modular function-based structure
-- Command-line interface (CLI)
+- **Beautiful Terminal UI**: Uses `rich` for colorful panels, tables, and structured layouts.
+- **Real-time weather data**: Current temperature, "feels like" temperature, and weather conditions.
+- **Smart Forecast Logic**: Separates today's forecast from the future days, providing a cleaner overview.
+- **Secure Configuration**: Uses `python-dotenv` to keep API keys out of source code.
+- **Chinese language support**: Weather descriptions are localized.
+- **Robust Error Handling**: Friendly error messages for missing parameters, bad API keys, or network issues.
 
 ---
 
 # Technologies Used
 
 - Python 3
-- Requests library
+- `requests` (API calls)
+- `rich` (Terminal formatting and UI)
+- `python-dotenv` (Environment variable management)
 - OpenWeatherMap API
 
 ---
@@ -36,109 +41,3 @@ Clone the repository:
 
 ```bash
 git clone git@github.com:zhoulinhua0-star/weather-cli.git
-```
-
-Move into the project folder:
-
-```bash
-cd weather-cli
-```
-
-Install dependencies:
-
-```bash
-pip3 install requests
-```
-
----
-
-# Usage
-
-## macOS / Linux
-
-```bash
-python3 main.py Tokyo
-```
-
-## Windows
-
-```bash
-python main.py Tokyo
-```
-
-Example:
-
-```bash
-python3 main.py Beijing
-```
-
----
-
-# Example Output
-
-```text
-🌍 【Beijing】 当前实时天气
-🌡️ 当前温度: 24°C (体感: 22°C) | ☁️ 状况: 多云
-
-📅 【Beijing】 未来 5 天预报概览:
--------------------------------------------------------
-🗓️ 日期: 2026-05-17 | 🌡️ 温度: 24.3°C | ☁️ 状况: 多云
-🗓️ 日期: 2026-05-18 | 🌡️ 温度: 26.1°C | ☁️ 状况: 小雨
--------------------------------------------------------
-```
-
----
-
-# Project Structure
-
-```text
-weather-cli/
-│
-├── main.py
-├── README.md
-```
-
----
-
-# API Setup
-
-This project uses the OpenWeatherMap API.
-
-Get your free API key here:
-
-https://openweathermap.org/api
-
-Then replace:
-
-```python
-API_KEY = "your_api_key"
-```
-
-with your own API key.
-
----
-
-# What I Learned
-
-Through this project, I practiced:
-
-- Making API requests with Python
-- Parsing JSON data
-- Error handling
-- Using command-line arguments (`sys.argv`)
-- Organizing code into functions
-- Building beginner-friendly CLI tools
-
----
-
-# Future Improvements
-
-Possible future upgrades:
-
-- Add hourly forecasts
-- Add weather icons
-- Support multiple languages
-- Use environment variables for API keys
-- Create a GUI version
-- Package the app with argparse
-
